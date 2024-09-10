@@ -1,6 +1,5 @@
 var selecables = document.getElementsByClassName("selectable");
-
-
+console.log(selecables);
 function getDarkSlider(selectable_p) {
     var children = selectable_p.children;
     
@@ -63,7 +62,6 @@ for (let i = 0; i < selecables.length; i++) {
 
     selecables[i].addEventListener("mouseleave", (event) => {
         var ele = event.target;
-        console.log("Off");
         if (!ele.classList.contains("selectable")) {
             ele = ele.parentElement;
         }

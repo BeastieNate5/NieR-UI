@@ -21,10 +21,20 @@ body {
     background-size: 4px 4px;
     background-color: var(--main-color);
     z-index: 5;
+    height: 100%;
 }
 
 nav {
     margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid var(--main-color-darker);
+}
+
+.selectable-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .nav-container {
@@ -37,17 +47,17 @@ nav {
 }
 
 .nav-container li {
-    position: relative;
-    display: inline;
-    text-align: left;
     width: 160px;
     height: 40px;
-    text-transform: uppercase;
 }
 
 .selectable {
     background-color: var(--main-color-darken);
     color: var(--main-color-darker);
+    position: relative; 
+    display: inline;
+    text-align: left;
+    text-transform: uppercase;
 }
 
 .selectable-active {
@@ -137,4 +147,19 @@ nav {
 
 .selectable-icon-active {
     background-color: var(--main-color);
+}
+
+.main-section {
+    padding: 35px;
+    padding-top: 20px;
+}
+
+.section-title {
+    color: var(--main-color-darker);
+    margin: 0;
+    font-weight: normal;
+    font-size: 2.7rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-shadow: #aaa593 5px 5px;
 }
