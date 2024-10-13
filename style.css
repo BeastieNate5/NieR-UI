@@ -21,7 +21,8 @@ body {
     background-size: 4px 4px;
     background-color: var(--main-color);
     z-index: 5;
-    height: 100%;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 nav {
@@ -33,8 +34,15 @@ nav {
 .selectable-container {
     list-style: none;
     display: flex;
+    justify-self: flex-start;
     flex-direction: column;
     gap: 20px;
+}
+
+.selectable-container .selectable {
+    height: 40px;
+    width: 425px;
+    font-weight: lighter;
 }
 
 .nav-container {
@@ -46,18 +54,16 @@ nav {
     padding: 0;
 }
 
-.nav-container li {
+.nav-container .selectable {
     width: 160px;
     height: 40px;
+    text-transform: uppercase;
 }
 
 .selectable {
     background-color: var(--main-color-darken);
     color: var(--main-color-darker);
     position: relative; 
-    display: inline;
-    text-align: left;
-    text-transform: uppercase;
 }
 
 .selectable-active {
@@ -129,7 +135,18 @@ nav {
     font-weight: normal;
 }
 
-.nav-container li h2 {
+.selectable-text-right {
+    z-index: 2;
+    position: absolute;
+    margin: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    margin-right: 6px;
+    right: 0;
+    font-weight: normal;
+}
+
+.selectable h2 {
     display: inline;
 }
 
@@ -151,7 +168,7 @@ nav {
 
 .main-section {
     padding: 35px;
-    padding-top: 20px;
+    padding-top: 20px; 
 }
 
 .section-title {
@@ -162,4 +179,48 @@ nav {
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     text-shadow: #aaa593 5px 5px;
+}
+
+.bottom-section {
+    position: relative;
+    background-color: #C7C1AB;
+    border-left: var(--main-color-darker) 10px solid;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+    height: 67px;
+    width: 95%;
+}
+
+.bottom-section::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    background-color: var(--main-color-darker);
+    height: 100%;
+    left: 5px;
+}
+
+.bottom-section::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color-darker);
+    right: 5px;
+    bottom: 5px;
+}
+
+.bottom-section p {
+    margin-left: 25px;
+    font-size: 1.3em;
+}
+
+.bottom-section-right {
+    display: flex;
+    margin-left: auto;
+    margin-right: 35px;
 }
