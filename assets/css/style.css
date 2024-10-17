@@ -35,9 +35,49 @@ nav {
 .selectable-container {
     list-style: none;
     display: flex;
-    justify-self: flex-start;
+    justify-content: space-between;
     flex-direction: column;
     gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.secion-selectables-container {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.selectables-lines {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.selectables-lines .line {
+    height: 100%;
+    width: 10px;
+    animation: lineSlide 0.2s;
+    animation-fill-mode: forwards;
+    background-color: #aaa593;
+}
+
+.selectables-lines .line1 {
+    height: 100%;
+    width: 3px;
+    animation: lineSlide 0.2s;
+    animation-fill-mode: forwards;
+    background-color: #aaa593;
+}
+
+@keyframes lineSlide {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
 }
 
 .selectable-container .selectable {
@@ -206,7 +246,7 @@ nav {
     display: flex;
     align-items: center;
     height: 79px;
-    width: 95%;
+    width: 96%;
     transform: translateY(30px);
     animation: bottom-slide-up 0.4s;
     animation-fill-mode: forwards;

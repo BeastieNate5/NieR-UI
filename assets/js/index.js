@@ -2,25 +2,25 @@ const menuData = {
     "Quests": {
         "selectables": ["Active Quests", "All Quests", "Cleared Quests:50%"],
         "description": "Confirm quest details and objectives"
-    }
+    },
 
     "Weapons": {
         "selectables" : ["Weapons:20%", "Weapon Set 1", "Weapon Set 2"],
         "description": "View all of the weapons in your possession"
-    }  
+    },
 
     "skiils": {
-        "selectables" : ["Pod Programs:18%", "Plug-in Chips"]
+        "selectables" : ["Pod Programs:18%", "Plug-in Chips"],
         "description" : "Assign Pod abilites"
-    }
+    },
     
     "intel": {
-        "selectables": ["Unit Data:42%", "Tutorials:82%", "Weapon Stories:10%", "Picture Books:37%", "Novel:16%"]
+        "selectables": ["Unit Data:42%", "Tutorials:82%", "Weapon Stories:10%", "Picture Books:37%", "Novel:16%"],
         "description": "asdokadkoasp"
-    }
+    },
 
     "system": {
-        "selectables": ["Save", "Load", "Settings", "Controls", "Network", "Play Records", "Return to Title Screen", "Exit Game"]
+        "selectables": ["Save", "Load", "Settings", "Controls", "Network", "Play Records", "Return to Title Screen", "Exit Game"],
         "description": "Change game settings"
     }
 }
