@@ -1,0 +1,5 @@
+# NieR UI
+`NieR Automata pause menu recreation (WIP)`
+
+## About
+This project is a recreation of the NieR Automata pause menu. It's is created with just HTML, CSS, and JavaScript with no JS framework. The project is currently not done and I don't know how much of it I will really get done
