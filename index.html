@@ -11,33 +11,40 @@
 
 <nav>
     <ul class="nav-container">
-        <li class="selectable">
+        <li class="selectable selectable-nav" menu="quests1">
             <img class="selectable-icon" src="/assets/images/icon.svg">
             <h2 class="selectable-text">Map</h2>
+            <div class="dark-slider"></div>
         </li>
-        <li class="selectable">
+        <li class="selectable selectable-nav" menu="quests">
             <img class="selectable-icon" src="/assets/images/icon.svg">
             <h2 class="selectable-text">Quests</h2>
+            <div class="dark-slider"></div>
         </li>
-        <li class="selectable">
+        <li class="selectable selectable-nav" menu="items">
             <img class="selectable-icon" src="/assets/images/icon.svg">
             <h2 class="selectable-text">Items</h2>
+            <div class="dark-slider"></div>
         </li>
-        <li class="selectable">
+        <li class="selectable selectable-nav" menu="weapons">
             <img class="selectable-icon" src="/assets/images/icon.svg">
             <h2 class="selectable-text">Weapons</h2>
+            <div class="dark-slider"></div>
         </li>
-        <li class="selectable">
+        <li class="selectable selectable-nav" menu="skills">
             <img class="selectable-icon" src="/assets/images/icon.svg">
             <h2 class="selectable-text">Skills</h2>
+            <div class="dark-slider"></div>
         </li>
-        <li class="selectable">
+        <li class="selectable selectable-nav" menu="intel">
             <img class="selectable-icon" src="/assets/images/icon.svg">
             <h2 class="selectable-text">Intel</h2>
+            <div class="dark-slider"></div>
         </li>
-        <li class="selectable">
+        <li class="selectable selectable-nav" menu="system">
             <img class="selectable-icon" src="/assets/images/icon.svg">
             <h2 class="selectable-text">System</h2>
+            <div class="dark-slider"></div>
         </li>
     </ul>
 </nav>
@@ -45,31 +52,17 @@
 <body>
     <div class="main-container">
         <div class="main-section">
-            <h1 class="section-title">Quests</h1>
+            <h1 id="section-title"></h1>
 
                 <div class="divider">
                     <div class="secion-selectables-container">
                         <div class="selectables-lines">
-                            <div class="line"></div>
-                            <div class="line1"></div>
+                            <div class="line lineSlide"></div>
+                            <div class="line1 lineSlide"></div>
                         </div>
                         <div class="section-selectables">
-                            <ul class="selectable-container">
-                                <li class="selectable">
-                                    <img src="/assets/images/icon.svg" class="selectable-icon">
-                                    <h2 class="selectable-text">Active Quests</h2>
-                                </li>
-            
-                                <li class="selectable">
-                                    <img src="/assets/images/icon.svg" class="selectable-icon">
-                                    <h2 class="selectable-text">Completed Quests</h2>
-                                </li>
-                                
-                                <li class="selectable">
-                                    <img src="/assets/images/icon.svg" class="selectable-icon">
-                                    <h2 class="selectable-text">Cleared Quests</h2>
-                                    <h2 class="selectable-text-right">25%</h2>
-                                </li>
+                            <ul id="selectable-container">
+
         
                             </ul>
                         </div>
@@ -142,9 +135,9 @@
                 
         </div>
 
-        <div class="bottom-section">
+        <div id="bottom-section" class="slide-up">
             <div class="bottom-section-left">
-                <p>Confirm quest details and objectives</p>
+                <p id="bottom-text">Confirm quest details and objectives</p>
             </div>
             
             <div class="bottom-section-right">
@@ -153,6 +146,7 @@
                 <p>Back</p>
             </div>
         </div>
+        
     </div>
 </body>
 </html>

@@ -32,7 +32,7 @@ nav {
     border-bottom: 4px solid var(--main-color-darker);
 }
 
-.selectable-container {
+#selectable-container {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -57,14 +57,14 @@ nav {
 .selectables-lines .line {
     height: 100%;
     width: 10px;
-    animation: lineSlide 0.2s;
-    animation-fill-mode: forwards;
-    background-color: #aaa593;
 }
 
 .selectables-lines .line1 {
     height: 100%;
     width: 3px;
+}
+
+.lineSlide {
     animation: lineSlide 0.2s;
     animation-fill-mode: forwards;
     background-color: #aaa593;
@@ -80,10 +80,29 @@ nav {
     }
 }
 
-.selectable-container .selectable {
+#selectable-container .selectable {
     height: 43px;
     width: 425px;
     font-weight: lighter;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+#selectable-container .selectable.slide-in {
+    animation: slide-in 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .nav-container {
@@ -213,7 +232,7 @@ nav {
     padding-top: 20px; 
 }
 
-.section-title {
+#section-title {
     color: var(--main-color-darker);
     margin: 0;
     font-weight: normal;
@@ -236,7 +255,7 @@ nav {
     height: 100%;
 }
 
-.bottom-section {
+#bottom-section {
     position: relative;
     margin-bottom: 120px;
     margin-right: auto;
@@ -248,9 +267,11 @@ nav {
     height: 79px;
     width: 96%;
     transform: translateY(30px);
+}
+
+.slide-up {
     animation: bottom-slide-up 0.4s;
     animation-fill-mode: forwards;
-
 }
 
 @keyframes bottom-slide-up {
@@ -265,7 +286,7 @@ nav {
     }
 }
 
-.bottom-section::before {
+#bottom-section::before {
     position: absolute;
     content: "";
     width: 3px;
@@ -274,7 +295,7 @@ nav {
     left: 5px;
 }
 
-.bottom-section::after {
+#bottom-section::after {
     position: absolute;
     content: "";
     width: 15px;
@@ -284,7 +305,7 @@ nav {
     bottom: 5px;
 }
 
-.bottom-section p {
+#bottom-section p {
     margin-left: 25px;
     font-size: 1.3em;
 }
@@ -358,4 +379,9 @@ nav {
     align-items: center;
     color: var(--main-color-darker);
     font-size: 1.1em;
+}
+
+
+.hidden {
+    opacity: 0;
 }
