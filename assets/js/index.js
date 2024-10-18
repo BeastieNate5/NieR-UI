@@ -1,3 +1,12 @@
+let interacted = false;
+// This exist because of chromium broswers auto play policy 
+function trackInteraction() {
+    document.addEventListener("keydown", () => {interacted = true});
+    document.addEventListener("click", () => {interacted = true});
+}
+
+trackInteraction();
+
 const menuData = {
     "quests1": {
         "selectables": ["Active Quests", "All Quests", "Cleared Quests:50%"],
@@ -63,13 +72,11 @@ function getSelectableIcon(selectable_p) {
 
 function iconOn(selectable) {
     var icon = getSelectableIcon(selectable);
-    var icon_src = icon.getAttribute("src");
     icon.setAttribute("src", "/assets/images/icon_active.svg");
 }
 
 function iconOff(selecable) {
     var icon = getSelectableIcon(selecable);
-    var icon_src = icon.getAttribute("src");
     icon.setAttribute("src", "/assets/images/icon.svg");
 }
 
@@ -142,6 +149,9 @@ function selectableOn(selectable) {
     iconOn(selectable);
     darkSlider.classList.add("dark-slider-on");
     menuIcon.classList.add("selectable-icon-active");
+    if (interacted) {
+        new Audio("/assets/sounds/scrolling.ogg").play();
+    }
 }
 
 function selectableOff(selecable) {
@@ -156,7 +166,6 @@ function selectableOff(selecable) {
 function activateSelectable(selectable) {
     selectable.addEventListener("mouseenter", (event) => {
         let ele = event.target;
-
         if (!ele.classList.contains("selectable")) {
             ele = ele.parentElement;
         }
